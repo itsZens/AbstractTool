@@ -1,4 +1,4 @@
-# DAM2_M06_UF1_AbstractTool
+# AbstractTool
 Tool to analyze a plain text file located on a folder called "AbstractTool" created by the program. It returns:
   - Name of the file
   - Extension of the file
