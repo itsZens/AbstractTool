@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "M06_UF1_PersistenciaFitxers/1.0.0": {
+        "runtime": {
+          "M06_UF1_PersistenciaFitxers.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "M06_UF1_PersistenciaFitxers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

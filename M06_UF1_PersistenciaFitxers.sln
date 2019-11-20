@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M06_UF1_PersistenciaFitxers", "M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers.csproj", "{4B3C3C86-F652-4092-9543-0E6AAF2804DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B3C3C86-F652-4092-9543-0E6AAF2804DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B3C3C86-F652-4092-9543-0E6AAF2804DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B3C3C86-F652-4092-9543-0E6AAF2804DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B3C3C86-F652-4092-9543-0E6AAF2804DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FC5A6A0-D250-4A41-A9B2-85B87A9A2510}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,11 @@
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\bin\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.exe
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\bin\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.deps.json
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\bin\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.runtimeconfig.json
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\bin\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.runtimeconfig.dev.json
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\bin\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.dll
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\bin\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.pdb
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\obj\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.csprojAssemblyReference.cache
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\obj\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.AssemblyInfoInputs.cache
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\obj\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.AssemblyInfo.cs
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\obj\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.dll
+C:\Users\Daniel Muelle Ramos\Projects_C#\Projects\M06_UF1_PersistenciaFitxers\M06_UF1_PersistenciaFitxers\obj\Debug\netcoreapp3.0\M06_UF1_PersistenciaFitxers.pdb
