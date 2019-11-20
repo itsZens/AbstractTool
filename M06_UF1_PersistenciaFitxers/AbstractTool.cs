@@ -170,7 +170,7 @@ namespace M06_UF1_PersistenciaFitxers
         /// Creates a XML document to save all the words from a file and its occurrences.
         /// </summary>
         /// <param name="dictionary">Dictionary: Container of the words from a file and its occurrences</param>
-        /// <param name="filename">String: Name of the file to analyzes</param>
+        /// <param name="filename">String: Name of the file to analyze</param>
         public static void CreateXMLWords(Dictionary<string, int> dictionary, string filename)
         {
             XmlDocument xml = new XmlDocument();
@@ -212,7 +212,7 @@ namespace M06_UF1_PersistenciaFitxers
                     string creationDate = GetCreationDate(file);
                     string modificationDate = GetLastModificationDate(file);
                     int words = GetWordsInAFile(sr);
-                    string theme = GetFileTheme(file, filename);
+                    string theme = GetFileTheme(file, fileName);
 
                     SaveInfoInAFile(fileName, fileExtension, creationDate, modificationDate, words, theme);
 
