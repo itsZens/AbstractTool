@@ -11,5 +11,7 @@ The folder "AbstractTool" is created by default on the user's desktop. Inside, y
 
 AbstractTool can only analyze correctly files written in catalan. In order to analyze files written in other languages, place the words that AbstracTool should not count in the "InvalidWords.txt". Some words that should ignore are articles, prepositions, adverbs...
 
+The information is saved in .txt in the "AbstractTool" folder on the user's desktop called as FILENAME_info.txt where FILENAME is the name of the file you analyzed. It also saves the list of occurrences of the words in a XML file named FILENAME_words.xml where FILENAME is the name of the file you analyzed.
+
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional</a>.
