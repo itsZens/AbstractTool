@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Xml;
+using System.Collections;
 
 namespace M06_UF1_PersistenciaFitxers
 {
@@ -78,6 +79,81 @@ namespace M06_UF1_PersistenciaFitxers
 
 
         /// <summary>
+        /// Reads the content of a file and returns the 5 most repeated words by paragraphs in order to detect the theme in each one.
+        /// </summary>
+        /// <param name="file">String: Path of the file to analyze</param>
+        /// <param name="filename">String: Name of the file given</param>
+        /// <returns></returns>
+        public static ArrayList GetFileThemeByParagraphs(string file, string filename)
+        {
+            Dictionary<string, int> dictionary = new Dictionary<string, int>();
+            string delimiters = " ,.;:¿?¡!'";
+            string[] fields = null;
+            string lines = null;
+            StreamReader sr = new StreamReader(file);
+            string invalidWordsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "AbstractTool", "InvalidWords.txt");
+            string excludingWords = File.ReadAllText(invalidWordsPath);
+
+            ArrayList paragraphsWords = new ArrayList();
+
+            while (!sr.EndOfStream)
+            {
+                lines = sr.ReadLine();
+                string[] textToParagraph = lines.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                string paragraph = textToParagraph[0].ToString();
+                paragraph.Trim();
+                fields = paragraph.Split(delimiters.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+
+                for (int i = 0; i < fields.Length; i++)
+                {
+                    fields[i] = fields[i].ToLower();
+
+                    if (dictionary.ContainsKey(fields[i]))
+                    {
+                        dictionary[fields[i]]++;
+                    }
+                    else
+                    {
+
+                        if(!excludingWords.Contains(fields[i]))
+                        {
+                            dictionary[fields[i]] = 1;
+                        }
+                    }
+                }
+
+                // Uncomment this in order to show the occurrences of the words
+                //foreach (KeyValuePair<string, int> kvp in dictionary)
+                //{
+                //    Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+                //}
+                //Console.WriteLine();
+
+                var MaxValuesDictionary = (from entry in dictionary orderby entry.Value descending select entry)
+                   .ToDictionary(pair => pair.Key, pair => pair.Value).Take(5);
+
+                string moreRepeatedWords = "";
+                int counterRepeatedWords = 1;
+                foreach (KeyValuePair<string, int> max in MaxValuesDictionary)
+                {
+                    if (counterRepeatedWords == 5)
+                    {
+                        moreRepeatedWords += max.Key + ".";
+                    }
+                    else
+                    {
+                        moreRepeatedWords += max.Key + ", ";
+                    }
+                    counterRepeatedWords++;
+                }
+
+                paragraphsWords.Add(moreRepeatedWords);
+            }
+
+            return paragraphsWords;
+        }
+
+        /// <summary>
         /// Reads the content of a file and returns the 5 most repeated words in order to detect the theme of the file.
         /// </summary>
         /// <param name="file">String: Path of the file to analyze</param>
@@ -110,7 +186,7 @@ namespace M06_UF1_PersistenciaFitxers
                     else
                     {
 
-                        if(!excludingWords.Contains(fields[i]))
+                        if (!excludingWords.Contains(fields[i]))
                         {
                             dictionary[fields[i]] = 1;
                         }
@@ -130,9 +206,9 @@ namespace M06_UF1_PersistenciaFitxers
 
             string moreRepeatedWords = "";
             int counterRepeatedWords = 1;
-            foreach(KeyValuePair<string, int> max in MaxValuesDictionary)
+            foreach (KeyValuePair<string, int> max in MaxValuesDictionary)
             {
-                if(counterRepeatedWords == 5)
+                if (counterRepeatedWords == 5)
                 {
                     moreRepeatedWords += max.Key + ".";
                 }
@@ -213,6 +289,8 @@ namespace M06_UF1_PersistenciaFitxers
                     string modificationDate = GetLastModificationDate(file);
                     int words = GetWordsInAFile(sr);
                     string theme = GetFileTheme(file, fileName);
+                    ArrayList paragraphsTheme = GetFileThemeByParagraphs(file, filename);
+                    int paragraphCounter = 0;
 
                     SaveInfoInAFile(fileName, fileExtension, creationDate, modificationDate, words, theme);
 
@@ -221,6 +299,13 @@ namespace M06_UF1_PersistenciaFitxers
                     Console.WriteLine("Creation: " + creationDate);
                     Console.WriteLine("Last Modification: " + modificationDate);
                     Console.WriteLine("Words: " + words);
+
+                    foreach (string paragraph in paragraphsTheme)
+                    {
+                        Console.WriteLine("Paragraph " + paragraphCounter + " theme: " + paragraph);
+                        paragraphCounter++;
+                    }
+
                     Console.WriteLine("Theme: " + theme);
                     Console.WriteLine(Environment.NewLine + Environment.NewLine);
                     Console.WriteLine("Information saved on a file named " + fileName + "_info" + fileExtension);
