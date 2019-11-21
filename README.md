@@ -4,6 +4,7 @@ Tool to analyze a plain text file located on a folder called "AbstractTool" crea
   - Extension of the file
   - Creation date
   - Last modification date
+  - Theme of the file by paragraphs (Top 5 more repeated words in a paragraph of the text) --> Not saved anywhere!
   - Theme of the file (Top 5 more repeated words in the text)
 
 
